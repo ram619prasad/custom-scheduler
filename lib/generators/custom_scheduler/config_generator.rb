@@ -1,4 +1,5 @@
 require 'rails/generators'
+
 module CustomScheduler
   module Generators
     class ConfigGenerator < Rails::Generators::Base

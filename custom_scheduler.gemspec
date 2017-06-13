@@ -6,11 +6,11 @@ require "custom_scheduler/version"
 Gem::Specification.new do |spec|
   spec.name          = "custom_scheduler"
   spec.version       = CustomScheduler::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = 'Ram Prasad Reddy'
   spec.email         = ["ram.prasad@introhive.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "Custom scheduler gem"
+  spec.description   = "Used for customising the scheduler based on client requirement"
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
