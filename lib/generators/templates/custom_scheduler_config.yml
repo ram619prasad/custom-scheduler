@@ -1,0 +1,14 @@
+defaults: &defaults
+
+  # Manually listing all the jobs with time, need to find a way to automate this.
+  jobs:
+    # import_users * * * * *
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+test:
+  <<: *defaults
