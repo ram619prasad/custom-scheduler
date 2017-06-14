@@ -11,12 +11,21 @@ module CustomScheduler
       include Rails::Generators::Migration
       source_root File.expand_path('../../templates', __FILE__)
 
-      def generate_model
+      def generate_configured_scheduler_model
         template "configured_scheduler.rb", "#{Rails.root}/app/models/configured_scheduler.rb"
       end
 
-      def generate_migration
-        migration_template "migration.rb", "#{Rails.root}/db/migrate/create_configured_schedulers.rb"
+      def generate_master_configured_scheduler_model
+        template "master_configured_scheduler.rb", "#{Rails.root}/app/models/master_configured_scheduler.rb"
+      end
+
+      def generate_master_configured_schedulers_migration
+        migration_template "create_master_configured_schedulers_migration.rb", "#{Rails.root}/db/migrate/create_master_configured_schedulers.rb"
+      end
+
+      def generate_configured_schedulers_migration
+        sleep(3)
+        migration_template "create_configured_schedulers_migration.rb", "#{Rails.root}/db/migrate/create_configured_schedulers.rb"
       end
 
       def self.next_migration_number(path)

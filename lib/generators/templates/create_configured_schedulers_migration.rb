@@ -3,7 +3,7 @@ class CreateConfiguredSchedulers < ActiveRecord::Migration
     create_table :configured_schedulers do |t|
       t.integer :account_id
       t.string :job_name
-      t.datetime :scheduled_at
+      t.string :scheduled_at
       t.boolean :skip
 
       t.timestamps
