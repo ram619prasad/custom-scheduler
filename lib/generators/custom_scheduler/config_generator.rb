@@ -8,7 +8,7 @@ module CustomScheduler
       desc "Creates a CustomScheduler configuration file"
 
       def generate_configuration
-        copy_file "custom_scheduler_config.yml", "#{Rails.root}/config/custom_scheduler_config.yml"
+        copy_file "configured_scheduler.yml", "#{Rails.root}/config/configured_scheduler.yml"
       end
     end
   end
