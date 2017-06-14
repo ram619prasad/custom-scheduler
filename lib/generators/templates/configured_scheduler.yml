@@ -3,6 +3,8 @@ defaults: &defaults
   # Manually listing all the jobs with time, need to find a way to automate this.
   jobs:
     # import_users * * * * *
+    scheduler:send_activity_sync_emails                : * 0 0 0 0
+    company_digest:send_based_on_subscription[monthly] : 0 * 1 * *
 
 development:
   <<: *defaults
