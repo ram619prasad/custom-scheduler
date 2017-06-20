@@ -28,6 +28,10 @@ module CustomScheduler
         migration_template "create_configured_schedulers_migration.rb", "#{Rails.root}/db/migrate/create_configured_schedulers.rb"
       end
 
+      def migrate
+        rake "db:migrate"
+      end
+
       def self.next_migration_number(path)
         Time.now.utc.strftime("%Y%m%d%H%M%S")
       end
