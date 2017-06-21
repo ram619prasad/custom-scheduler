@@ -1,0 +1,20 @@
+<% if @master_jobs.present? %>
+  <%= will_paginate @master_jobs %>
+  <table class="table table-hover">
+    <tr>
+      <th>Name</th>
+      <th>Scheduled At</th>
+      <th>Skip</th>
+    </tr>
+
+    <% @master_jobs.each do |job| %>
+      <tr>
+        <td><%= job.job_name %></td>
+        <td><%= job.scheduled_at %></td>
+        <td><%= job.skip %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <div class="alert alert-info" role="alert">No Jobs Found. You can add your default jobs to configured_scheduler.yml and run the sync generator to update jobs.</div>
+<% end %>
